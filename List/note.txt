@@ -1,0 +1,12 @@
+Minh viet 1 file python, neu run code o file do, thi no dc coi la main, la pham vi cap cao nhat ma code thuc hiejn
+thuong la ngay o file run code
+__name__ ten cua pham vi chay code
+1 module co the kiem tra co hay khong co bang cach kiem tra __name__ cua no,
+cho phep code trong module chay duoi tap lenh main, 
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    main()
+
+muon kiem tra module co dc import vao hay ko, them print(__name__) o module do, 
+khi import vao file khac, no se chay import dau tien va in ra ngay trong cosole name cua module\
