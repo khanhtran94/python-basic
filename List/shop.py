@@ -23,6 +23,14 @@ def add_to_list(item):
   
   show_list()
 
+def remove_item_shopping():
+  clear_screen()
+  what_remove_item = input("What item remove ? \n")
+  try:
+    shopping_list.remove(what_remove_item)
+  except ValueError as err:
+    pass
+
 def show_help():
   clear_screen()
   print("What should we pick up at the store ")
@@ -51,6 +59,9 @@ while True:
     continue
   elif new_item.upper() == 'SHOW':
     show_list()
+    continue
+  elif new_item.upper() == 'REMOVE':
+    remove_item_shopping()
     continue
   else:
     add_to_list(new_item)
