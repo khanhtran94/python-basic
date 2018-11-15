@@ -24,12 +24,13 @@ def add_to_list(item):
   show_list()
 
 def remove_item_shopping():
-  clear_screen()
+  show_list()
   what_remove_item = input("What item remove ? \n")
   try:
     shopping_list.remove(what_remove_item)
   except ValueError as err:
     pass
+  show_list()
 
 def show_help():
   clear_screen()
@@ -37,7 +38,8 @@ def show_help():
   print("""
 Enter DONE finish.
 Enter HELP for this help.
-Enter SHOW see your list
+Enter SHOW see your list.
+Enter REMOVE to delete an item from shopping list.
 """ )
 
 def show_list():
@@ -49,7 +51,7 @@ def show_list():
     i += 1
   print("-"*10)
 
-show_help
+show_help()
 while True:
   new_item = input("> ")
   if new_item.upper() == 'DONE':
